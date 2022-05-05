@@ -1,0 +1,5 @@
+---
+  deploy:
+    script:
+      - mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < $CI_PROJECT_DIR/2.sql
+      - mysql --user rfamro --host mysql-rfam-public.ebi.ac.uk --port 4497 --database Rfam < $CI_PROJECT_DIR/1.sql
